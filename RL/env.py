@@ -6,7 +6,7 @@ class Simulator:
     def __init__(self, mode):
         self.tuple_dict = {}
         self.all_apis = []
-        with open(os.path.join('../raw_data/all', f'{mode}.txt'), 'r', encoding='utf-8') as f:
+        with open(os.path.join('../data', f'{mode}.txt'), 'r', encoding='utf-8') as f:
             for line in f:
                 interaction = line.strip('\n').split(' ')
                 interaction = list(map(int, interaction))
