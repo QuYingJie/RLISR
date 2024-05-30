@@ -7,5 +7,5 @@ class Config:
         # kgat
         self.pre_kgat_embedding_dict = np.loadtxt('../data/entity_graph_embedding_matrix.txt')
         # concat
-        self.pre_embedding_dict = np.loadtxt('../data/pre_embedding_matrix.txt')
+        self.pre_embedding_dict = np.loadtxt('../data/entity_concat_embedding_matrix.txt')
 
