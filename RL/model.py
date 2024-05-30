@@ -7,9 +7,9 @@ class MyNet(Model):
         super(MyNet, self).__init__()
         # 定义模型
         # kgat preprocessing
-        self.kgat_embedding = Embedding(config.pre_kgat_embedding_dict.shape[0], 512, weights=[config.pre_kgat_embedding_dict], trainable=False, name='kgat')
+        self.kgat_embedding = Embedding(config.pre_kgat_embedding_dict.shape[0], 512, weights=[config.pre_kgat_embedding_dict], trainable=True, name='kgat')
         # concat preprocessing
-        self.concat_embedding = Embedding(config.pre_embedding_dict.shape[0], 1112, weights=[config.pre_embedding_dict], trainable=False, name='concat')
+        self.concat_embedding = Embedding(config.pre_embedding_dict.shape[0], 1112, weights=[config.pre_embedding_dict], trainable=True, name='concat')
         # enhanced preprocessing
         self.attention = GRU(512, recurrent_activation='sigmoid', return_sequences=True)
         self.pool = GlobalAveragePooling1D()
